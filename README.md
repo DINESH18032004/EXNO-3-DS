@@ -51,7 +51,7 @@ We use this categorical data encoding technique when the features are nominal(do
 ```python
 
 import pandas as pd
-df=pd.read_csv("/content/Encoding Data.csv")
+df=pd.read_csv("Encoding Data.csv")
 df
 ```
 ![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/6a654a7f-8923-43af-837f-fbaaae172990)
@@ -108,7 +108,7 @@ pip install --upgrade category_encoders
 
 ```py
 from category_encoders import BinaryEncoder
-df=pd.read_csv("/content/data.csv")
+df=pd.read_csv("data.csv")
 df
 ```
 
@@ -142,7 +142,7 @@ CC
 import pandas as pd
 from scipy import stats
 import numpy as np
-df=pd.read_csv("/content/Data_to_Transform.csv")
+df=pd.read_csv("Data_to_Transform.csv")
 df
 ```
 ![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/35a6bcdc-2928-41c5-986c-903d5205d9d5)
