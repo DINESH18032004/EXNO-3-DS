@@ -45,8 +45,8 @@ We use this categorical data encoding technique when the features are nominal(do
 • Yeojohnson method
 
 ## CODING AND OUTPUT:
-### Developed by : SRI VARSHAN P
-### Reg No : 212222240104
+### Developed by : DINESH KUMAR R
+### Reg No : 212222110010
 
 ```python
 
@@ -54,7 +54,7 @@ import pandas as pd
 df=pd.read_csv("Encoding Data.csv")
 df
 ```
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/6a654a7f-8923-43af-837f-fbaaae172990)
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/4e597843-b587-47ef-a0ef-8a5c148e1c43)
 
 
 ```py
@@ -63,14 +63,14 @@ pm=['Hot','Warm','Cold']
 e1=OrdinalEncoder(categories=[pm])
 e1.fit_transform(df[["ord_2"]])
 ```
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/da24dfe7-2a7e-4065-9fcf-a4eca0bc2bd2)
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/b24d0ec2-ce88-433d-8a68-1b250eb90bc0)
 
 
 ```py
 df['bo2']=e1.fit_transform(df[["ord_2"]])
 df
 ```
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/101cabae-f64c-4b1d-bc3d-1ced6bea5092)
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/c7c17572-7e61-486c-8bc1-84ef7f7bf0a4)
 
 
 ```py
@@ -79,7 +79,7 @@ dfc=df.copy()
 dfc['ord_2']=le.fit_transform(dfc['ord_2'])
 dfc
 ```
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/0e5b50a7-166d-4c8a-aa7f-47d4a829154d)
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/f644bd9e-faf1-4dc8-8f2e-017936d57c29)
 
 ```py
 from sklearn.preprocessing import OneHotEncoder
@@ -93,13 +93,13 @@ enc=pd.DataFrame(ohe.fit_transform(df2[["nom_0"]]))
 df2=pd.concat([df2,enc],axis=1)
 df2
 ```
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/737d95d4-7f40-4c73-a428-e710982d509e)
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/e93ff887-364a-4648-bb3a-db57b22897b0)
 
 
 ```py
 pd.get_dummies(df2,columns=["nom_0"])
 ```
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/9e7e2796-d572-42bf-9a59-799e6105bb68)
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/27de9791-f5cb-45ef-bda9-a01711a7cf62)
 
 
 ```py
@@ -124,7 +124,7 @@ df
 dfb=pd.concat([df,nd],axis=1)
 dfb
 ```
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/4f6f6a5a-3ed7-42b2-893d-ef09c752be3d)
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/6a3b23ee-e685-44fa-b5bd-376801b673f6)
 
 
 ```py
@@ -135,7 +135,7 @@ new=te.fit_transform(X=CC["City"],y=CC["Target"])
 CC=pd.concat([CC,new],axis=1)
 CC
 ```
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/f70c4873-aca1-4a62-a7a3-b40dfe168af1)
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/53c4b643-c66d-4e59-9a79-59b86659063a)
 
 
 ```py
@@ -145,57 +145,56 @@ import numpy as np
 df=pd.read_csv("Data_to_Transform.csv")
 df
 ```
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/35a6bcdc-2928-41c5-986c-903d5205d9d5)
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/de362b59-a607-4074-b936-51c2dd5961a9)
 
 
 ```py
 df.skew()
 ```
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/9cebcdc2-ff61-4e31-bc34-db6b3388e546)
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/082d0996-a0e1-49f1-b3c5-3940b7d6979e)
 
 
 ```py
 np.log(df["Highly Positive Skew"])
 ```
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/c316b1f8-a5a2-4487-99a9-1a0144e00ae1)
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/ffcc3fb5-28ee-4d92-9faa-c4bedc46b0b9)
 
 
 ```py
 np.reciprocal(df["Moderate Positive Skew"])
 ```
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/d5ccd5c9-87cb-42e4-8420-a37ea75e9add)
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/4f702e25-e31a-4331-bc26-b8a13ffb654b)
 
 
 ```py
 np.sqrt(df["Highly Positive Skew"])
 ```
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/09d3e8f9-0558-4039-90ff-3b358dcaeb2c)
-
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/e68f7497-d0b8-4117-b004-4703cfda95df)
 
 ```py
 np.square(df["Highly Positive Skew"])
 ```
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/a1ab31eb-09c6-4bb6-a569-466254420fee)
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/d4df145e-ad53-4d67-8f3d-530c1cfa57e2)
 
 
 ```py
 df["Highly Positive Skew_boxcox"], parameters=stats.boxcox(df["Highly Positive Skew"])
 df
 ```
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/4133ceae-19e0-487a-9e04-2185421e999c)
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/e6c64b78-0d7c-4e13-a393-d368afd688b9)
 
 
 ```py
 df.skew()
 ```
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/f2b6800d-4fda-4da3-9652-f3dcc47dc76d)
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/fbca1acb-df31-42ab-8aa7-0c9da5f20599)
 
 
 ```py
 df["Highly Negative Skew_yeojohnson"],parameters=stats.yeojohnson(df["Highly Negative Skew"])
 df.skew()
 ```
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/84134adb-72d1-4afc-bf2f-6649e0a00a6e)
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/05958632-1c31-45b3-acdc-adb01e9dff4d)
 
 ```py
 from sklearn.preprocessing import QuantileTransformer
@@ -203,7 +202,7 @@ qt=QuantileTransformer(output_distribution='normal')
 df["Moderate Negative Skew_1"]=qt.fit_transform(df[["Moderate Negative Skew"]])
 df
 ```
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/d8838866-2c73-4e6f-bb78-719723589804)
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/6febfb2f-6d9e-4d62-81a9-2d01903d33e6)
 
 ```py
 import seaborn as sns
@@ -212,7 +211,7 @@ import matplotlib.pyplot as plt
 sm.qqplot(df["Moderate Negative Skew"],line='45')
 plt.show()
 ```
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/48cf7384-276f-4955-8bad-16ef34e4b075)
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/32e38087-a50b-44f5-bf97-d3d2c328addb)
 
 
 ```py
@@ -220,7 +219,7 @@ sm.qqplot(np.reciprocal(df["Moderate Negative Skew"]),line='45')
 plt.show()
 ```
 
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/9a9a16d7-5d01-4216-bee8-255e7477463f)
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/848ca609-fe02-4f7f-98be-5abc2f625252)
 
 
 
@@ -234,8 +233,7 @@ sm.qqplot(df["Moderate Negative Skew"],line='45')
 plt.show()
 ```
 
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/d4a59337-cc27-46c6-b47c-5e9ba7988626)
-
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/e87c63bb-5bf8-4391-8285-e72a92205eb9)
 
 ```py
 df["Highly Negative Skew_1"]=qt.fit_transform(df[["Highly Negative Skew"]])
@@ -243,7 +241,7 @@ sm.qqplot(df["Highly Negative Skew"],line='45')
 plt.show()
 ```
 
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/6f7a4eaa-1c54-4409-8b57-8b407d5842f7)
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/a114a142-799d-4e82-8cb0-6930b5bf6f4d)
 
 
 ```py
@@ -258,14 +256,13 @@ dt["Age_1"]=qt.fit_transform(dt[["Age"]])
 sm.qqplot(dt['Age'],line='45') 
 plt.show()
 ```
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/e2ff6572-cb52-434f-8d9a-980843e1a1b9)
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/95e18d7d-add7-45ad-906e-a8f6c37951cc)
 
 ```py
 sm.qqplot(df["Highly Negative Skew_1"],line='45')
 plt.show()
 ```
-![image](https://github.com/PSriVarshan/EXNO-3-DS/assets/114944059/d5c66705-7e21-4a6b-8bc7-a9e1ca23ae85)
-
+![image](https://github.com/DINESH18032004/EXNO-3-DS/assets/119477784/658c6c99-d034-4393-b8bf-84e1bfefcb69)
 
 
 ## RESULT:
